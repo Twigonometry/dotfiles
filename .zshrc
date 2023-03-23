@@ -256,3 +256,15 @@ fi
 if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
+
+# cybersecurity aliases
+alias pyserv="python -m http.server 80"
+
+# vpn access aliases
+alias htbvpn="sudo openvpn ~/Documents/access/htb.ovpn"
+alias thmvpn="sudo openvpn ~/Documents/access/thm.ovpn"
+alias htbseason="sudo openvpn ~/Documents/access/htbcomp.ovpn"
+
+# TODO: nmap function
+
+# TODO: change prompt
