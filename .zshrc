@@ -257,14 +257,46 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
+# git helper - courtesy of thoughtbot
+# No arguments: `git status`
+# With arguments: acts like `git`
+g() {
+  if [[ $# > 0 ]]; then
+    git $@
+  else
+    git status
+  fi
+}
+
+# Complete g() like git
+compdef g=git
+
+# useful aliases
+alias c="clear"
+
+# make and cd
+function mcd() {
+  mkdir -p $1;
+  cd $1;
+}
+
+# nmap function
+# TODO: grab the found ports and scan those? separate function?
+# output found ports in comma-separated format at end for easy copy
+function nfast() {
+  mkdir nmap;
+  nmap --min-rate=10000 -p- $1 -oA nmap/$1-allports
+}
+
 # cybersecurity aliases
 alias pyserv="python -m http.server 80"
+alias websrv="cd ~/Documents/web/; python -m http.server 80"
+alias chiselserv="~/Documents/web/chisel_linux_64 server -p 8001 --reverse"
+alias listen="nc -lnvp 9001"
 
 # vpn access aliases
 alias htbvpn="sudo openvpn ~/Documents/access/htb.ovpn"
 alias thmvpn="sudo openvpn ~/Documents/access/thm.ovpn"
 alias htbseason="sudo openvpn ~/Documents/access/htbcomp.ovpn"
-
-# TODO: nmap function
 
 # TODO: change prompt
