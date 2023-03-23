@@ -275,6 +275,7 @@ compdef g=git
 alias c="clear"
 alias ld="ls -lat"
 alias lh="ls -lah"
+alias updaterc="cp ~/Documents/dotfiles/.zshrc ~/.zshrc && source ~/.zshrc"
 
 # make and cd
 function mcd() {
