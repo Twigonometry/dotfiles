@@ -273,6 +273,8 @@ compdef g=git
 
 # useful aliases
 alias c="clear"
+alias ld="ls -lat"
+alias lh="ls -lah"
 
 # make and cd
 function mcd() {
