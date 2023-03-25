@@ -298,7 +298,14 @@ function nfast() {
 alias pyserv="python -m http.server 80"
 alias websrv="cd ~/Documents/web/; python -m http.server 80"
 alias chiselserv="~/Documents/web/chisel_linux_64 server -p 8001 --reverse"
-alias listen="nc -lnvp 9001"
+
+listen() {
+  if [[ $# > 0 ]]; then
+    nc -lnvp $@
+  else
+    nc -lnvp 9001
+  fi
+}
 
 # vpn access aliases
 alias htbvpn="sudo openvpn ~/Documents/access/htb.ovpn"
