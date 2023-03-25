@@ -19,7 +19,7 @@ Creates a netcat listener. Listens on 9001 with no args, or on a port of your ch
 
 ### websrv
 
-Alias that launches a python server on `80` in `~/Documents/web/`. Put common enumeration/pivoting files here such as chisel, linpeas, etc. Other aliases assume that certain files are in here with a specific name. Python may need capabilities to run on port 80 without sudo but this is included by default on Kali
+Alias that launches a python server on `80` in `~/Documents/web/`. Put common enumeration/pivoting files here such as chisel, linpeas, etc. Other aliases assume that certain files are in here with a specific name. Python may need capabilities to run on port 80 without `sudo` but this is included by default on Kali
 
 ### pyserv
 
@@ -35,7 +35,7 @@ These aliases launch openvpn with a variety of `.ovpn` files. Rename your HTB se
 
 ### updaterc
 
-Sources the .zshrc file because I'm not enough of a Linux power user to be bothered with an install script just yet
+Sources the `.zshrc` file because I'm not enough of a Linux power user to be bothered with an install script just yet
 
 ### mcd
 
@@ -49,4 +49,4 @@ Standard `mkdir` and `cd` alias
   - [ ] Shorten the filepath if it's going to make the prompt very long (as we're now working on one line)
 - [ ] Install script
   - [ ] Give python necessary capabilities
-  - [ ] Output suggested commands to download good scripts for `~/Documents/web/`
+  - [ ] Output suggested commands to download good scripts for `~/Documents/web/` e.g. `wget https://github.com/jpillora/chisel/releases/download/v1.8.1/chisel_1.8.1_linux_arm64.gz -O ~/Documents/web/chisel_linux_64.gz && gunzip ~/Documents/web/chisel_linux_64.gz`
