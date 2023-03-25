@@ -292,6 +292,8 @@ function nfast() {
     mkdir nmap;
   fi
   nmap --min-rate=10000  -p- $1 -oA nmap/$1-allports "$@";
+  ports=$(grep "open" nmap/$1-allports.nmap | awk -F '/' '{print $1}' | sed -e 'H;${x;s/\n/,/g;s/^,//;p;};d');
+  echo "Now Run: nmap -sC -sV -p $ports $1 -oA nmap/$1";
 }
 
 # cybersecurity aliases
