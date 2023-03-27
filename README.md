@@ -21,13 +21,17 @@ Creates a netcat listener. Listens on 9001 with no args, or on a port of your ch
 
 Alias that launches a python server on `80` in `~/Documents/web/`. Put common enumeration/pivoting files here such as chisel, linpeas, etc. Other aliases assume that certain files are in here with a specific name. Python may need capabilities to run on port 80 without `sudo` but this is included by default on Kali
 
-### pyserv
+### pysrv
 
 Python server in current directory
 
-### chiselserv
+### chiselsrv
 
 Starts a chisel server in reverse mode
+
+### run-ghidra
+
+Runs ghidra...
 
 ### \*.vpn
 
