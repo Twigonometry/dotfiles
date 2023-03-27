@@ -297,9 +297,10 @@ function nfast() {
 }
 
 # cybersecurity aliases
-alias pyserv="python -m http.server 80"
+alias pysrv="python -m http.server 80"
 alias websrv="cd ~/Documents/web/; python -m http.server 80"
-alias chiselserv="~/Documents/web/chisel_linux_64 server -p 8001 --reverse"
+alias chiselsrv="~/Documents/web/chisel_linux_64 server -p 8001 --reverse"
+alias run-ghidra="/opt/ghidra_10.2_PUBLIC/ghidraRun"
 
 listen() {
   if [[ $# > 0 ]]; then
