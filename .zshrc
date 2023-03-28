@@ -1,6 +1,9 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
+#TODO: see if any of this can be eliminated to simplify config
+#TODO: change prompt
+
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
@@ -48,8 +51,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # History configurations
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=2000
+HISTSIZE=10000
+SAVEHIST=20000
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_dups       # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
@@ -116,7 +119,7 @@ configure_prompt() {
 # The following block is surrounded by two delimiters.
 # These delimiters must not be modified. Thanks.
 # START KALI CONFIG VARIABLES
-PROMPT_ALTERNATIVE=twoline
+PROMPT_ALTERNATIVE=oneline
 NEWLINE_BEFORE_PROMPT=yes
 # STOP KALI CONFIG VARIABLES
 
@@ -300,6 +303,7 @@ alias websrv="cd ~/Documents/web/; python -m http.server 80"
 alias chiselsrv="~/Documents/web/chisel_linux_64 server -p 8001 --reverse"
 alias run-ghidra="/opt/ghidra_10.2_PUBLIC/ghidraRun"
 
+# netcat listener
 listen() {
   if [[ $# > 0 ]]; then
     nc -lnvp $@
@@ -308,9 +312,23 @@ listen() {
   fi
 }
 
+# docker clear cache function
+# source https://forums.docker.com/t/how-to-delete-cache/5753
+alias docker_clean_images='sudo docker rmi $(sudo docker images -a --filter=dangling=true -q)'
+alias docker_clean_ps='sudo docker rm $(sudo docker ps --filter=status=exited --filter=status=created -q)'
+cldocker() {
+  sudo docker kill $(sudo docker ps -q)
+  docker_clean_ps
+  sudo docker rmi $(sudo docker images -a -q)
+}
+
+# quick alias to build current Dockerfile
+alias dbuild='sudo docker build -t docker-app .'
+
+# quick alias to docker-compose up
+alias dup='docker-compose up'
+
 # vpn access aliases
 alias htbvpn="sudo openvpn ~/Documents/access/htb.ovpn"
 alias thmvpn="sudo openvpn ~/Documents/access/thm.ovpn"
 alias htbseason="sudo openvpn ~/Documents/access/htbcomp.ovpn"
-
-# TODO: change prompt
