@@ -2,11 +2,33 @@
 
 Cybersecurity based dotfiles in `.kali-zshrc` which works with the base Kali install.
 
-Dotfiles for Ubuntu in `.ubuntu-bashrc`. Requires installing oh-my-zsh, so run `install.sh`.
+Dotfiles for Ubuntu in `.ubuntu-bashrc`.
 
-Make sure you put this directory inside your `~/Documents` folder so that `updaterc` alias works.
+Make sure you clone this repository inside your `~/Documents` folder so that `updaterc` alias works.
+
+```bash
+$ cd ~/Documents
+$ git clone git@github.com:Twigonometry/dotfiles.git
+```
+
+If on Kali, simply sourcing `.kali-zshrc` should work, as OMZ is already installed:
+
+```bash
+$ source ./.kali-zshrc
+```
+
+If installing for Ubuntu, requires installing oh-my-zsh, so run `install.sh`:
+
+```bash
+$ chmod +x install.sh
+$ ./install.sh
+```
+
+(no need to run `go.zsh`, as this is run by the install script as I'm not good enough at Linux to figure out how to do it in the same context)
 
 If the shell is still bash, you need to [login again](https://askubuntu.com/questions/195361/chsh-s-usr-bin-zsh-not-working)!
+
+Once sourced, any updates you can get by pulling the repo and running `updaterc`.
 
 ## Key Additions
 
