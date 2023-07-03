@@ -1,7 +1,8 @@
 # dotfiles
-Cybersecurity based dotfiles. First attempt at a dotfiles repo - likely not going to go very well
 
-This is largely a port of the base ZSH config on Kali, so there's a lot of stuff in `.zshrc` that I don't understand and isn't necessarily useful. My stuff is at the bottom
+Cybersecurity based dotfiles in `.kali-zshrc` which works with the base Kali install.
+
+Dotfiles for Ubuntu in `.ubuntu-bashrc`. Requires installing oh-my-zsh, so run `install.sh`.
 
 ## Key Additions
 
