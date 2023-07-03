@@ -166,6 +166,16 @@ function g() {
 # Complete g() like git
 compdef g=git
 
+#same for docker
+function d() {
+  if [[ $# > 0 ]]; then
+    docker $@
+  else
+    docker ps
+}
+
+compdef d=docker
+
 # useful aliases
 alias c="clear"
 alias ld="ls -lat"
@@ -191,3 +201,5 @@ alias dup='docker-compose up'
 #modify base prompt
 PROMPT="%(?:%{$fg_bold[green]%}%n :%{$fg_bold[red]%}%n )%{$fg[cyan]%}%~%{$reset_color%}"
 PROMPT+=' $(git_prompt_info)'
+
+#TODO: aws cli aliases
