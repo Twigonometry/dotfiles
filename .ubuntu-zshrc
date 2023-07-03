@@ -189,5 +189,5 @@ alias dbuild='sudo docker build -t docker-app .'
 alias dup='docker-compose up'
 
 #modify base prompt
-PROMPT="%(?:%{$fg_bold[green]%}%n :%{$fg_bold[red]%}%n ) %{$fg[cyan]%}%c%{$reset_color%}"
+PROMPT="%(?:%{$fg_bold[green]%}%n :%{$fg_bold[red]%}%n )%{$fg[cyan]%}%~%{$reset_color%}"
 PROMPT+=' $(git_prompt_info)'

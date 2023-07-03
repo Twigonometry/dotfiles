@@ -4,6 +4,10 @@ Cybersecurity based dotfiles in `.kali-zshrc` which works with the base Kali ins
 
 Dotfiles for Ubuntu in `.ubuntu-bashrc`. Requires installing oh-my-zsh, so run `install.sh`.
 
+Make sure you put this directory inside your `~/Documents` folder so that `updaterc` alias works.
+
+If the shell is still bash, you need to [login again](https://askubuntu.com/questions/195361/chsh-s-usr-bin-zsh-not-working)!
+
 ## Key Additions
 
 ### nfast()
