@@ -24,7 +24,7 @@ $ chmod +x install.sh
 $ ./install.sh
 ```
 
-(no need to run `go.zsh`, as this is run by the install script as I'm not good enough at Linux to figure out how to do it in the same context)
+This will automatically install Docker and source the file for you (no need to run `go.zsh` manually, as this is run by the install script as I'm not good enough at Linux to figure out how to run sh commands and switch to a zsh shell to source the file from within the same script...)
 
 If the shell is still bash, you need to [login again](https://askubuntu.com/questions/195361/chsh-s-usr-bin-zsh-not-working)!
 
