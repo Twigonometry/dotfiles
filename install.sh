@@ -1,3 +1,5 @@
 #!/bin/sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s /usr/bin/zsh
+
+zsh ./go.zsh
