@@ -1,2 +1,2 @@
 #!/usr/bin/zsh
-source ./ubuntu-zshrc
+source ./.ubuntu-zshrc

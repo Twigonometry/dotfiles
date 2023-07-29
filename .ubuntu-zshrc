@@ -166,6 +166,8 @@ function g() {
 # Complete g() like git
 compdef g=git
 
+alias gall="git add -A"
+
 #same for docker
 function d() {
   if [[ $# > 0 ]]; then
