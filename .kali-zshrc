@@ -274,6 +274,8 @@ g() {
 # Complete g() like git
 compdef g=git
 
+alias gall="git add -A"
+
 # useful aliases
 alias c="clear"
 alias ld="ls -lat"
