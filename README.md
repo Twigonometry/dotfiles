@@ -11,10 +11,11 @@ $ cd ~/Documents
 $ git clone git@github.com:Twigonometry/dotfiles.git
 ```
 
-If on Kali, simply sourcing `.kali-zshrc` should work, as OMZ is already installed:
+If on Kali, simply sourcing `.kali-zshrc` will work, as OMZ is already installed:
 
 ```bash
-$ source ./.kali-zshrc
+$ cp ~/Documents/dotfiles/.kali-zshrc ~/.zshrc
+$ source ~/.zshrc
 ```
 
 If installing for Ubuntu, requires installing oh-my-zsh, so run `install.sh`:
