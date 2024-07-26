@@ -76,8 +76,8 @@ Standard `mkdir` and `cd` alias
 ## Roadmap
 
 - [ ] Improve prompt 💀
-  - [ ] Strip the guff from the Kali prompt (multi lines, skull emojis etc)
-  - [ ] Add the IP of tun0 if it's connected
+  - [x] Strip the guff from the Kali prompt (multi lines, skull emojis etc)
+  - [x] Add the IP of tun0 if it's connected
   - [ ] Shorten the filepath if it's going to make the prompt very long (as we're now working on one line)
 - [ ] Install script
   - [ ] Give python necessary capabilities
