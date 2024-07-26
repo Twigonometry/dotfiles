@@ -352,3 +352,8 @@ export GHIDRA_INSTALL_DIR="/opt/ghidra_10.2_PUBLIC/"
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+kill_service_on_port() {
+    local port=$1
+    kill -9 $(lsof -t -i:$port)
+}
